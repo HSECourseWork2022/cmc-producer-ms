@@ -1,30 +1,16 @@
-package dev.hse.cmc.pojo;
+package dev.hse.cmc.response;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
 import java.util.Date;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//@Data
-//@Builder
-//@NoArgsConstructor
-//@AllArgsConstructor
-//public class TemplateRaw {
-//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "UTC+3")
-//    LocalDateTime timestamp;
-//    Long sourceId;
-//    Long matchedId;
-//    Double price;
-//}
-
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonDeserialize(using = ResponseDataDeserializer.class)
-public class ResponseData {
+public class CryptoCurrencyData {
 
     private int id;
     private String name;
@@ -39,6 +25,7 @@ public class ResponseData {
     private int num_market_pairs;
     private int cmc_rank;
     private Date last_updated;
+    @JsonIgnore
     private ArrayList<String> tags;
     private Object platform;
     private Object self_reported_circulating_supply;

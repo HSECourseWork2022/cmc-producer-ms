@@ -1,4 +1,4 @@
-package dev.hse.cmc.pojo;
+package dev.hse.cmc.response;
 
 import java.util.Date;
 import lombok.AllArgsConstructor;

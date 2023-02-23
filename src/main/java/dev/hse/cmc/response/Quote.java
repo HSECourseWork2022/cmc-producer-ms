@@ -1,4 +1,4 @@
-package dev.hse.cmc.pojo;
+package dev.hse.cmc.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -11,5 +11,5 @@ import lombok.NoArgsConstructor;
 public class Quote {
 
     @JsonProperty("USD")
-    public USD uSD;
+    public USD usd;
 }
