@@ -2,6 +2,6 @@ package dev.hse.cmc.utils;
 
 public class ServiceConstants {
 
-    public static final String LOG_TOPIC = "[cmc-producer-service][CoinMarketCapService]";
+    public static final String LOG_TOPIC = "[cmc-producer-service]";
 
 }
