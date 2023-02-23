@@ -5,8 +5,8 @@ Ready to kick-start producer microservice template
 * Spring Boot: 2.7.5
 
 # What do you need to update?
-1. Rename `TemplateProducerApplication` in `dev.hse.template` package to `{{ Source }}ProducerApplication`
-2. Under `src/main/java` rename `dev.hse.template` package to your preferred one
+1. Rename `TemplateProducerApplication` in `dev.hse.cmc` package to `{{ Source }}ProducerApplication`
+2. Under `src/main/java` rename `dev.hse.cmc` package to your preferred one
 3. Change `artifactId` in pom from `template-producer-ms` to your project's
 4. Change POJO models
    1. `TemplateRaw` to your raw model (be careful with LocalDateTime format) `{{ Subtheme }}Raw`

@@ -1,4 +1,4 @@
-package dev.hse.template.utils.serialization;
+package dev.hse.cmc.utils.serialization;
 
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

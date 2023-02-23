@@ -1,18 +1,18 @@
-package dev.hse.template.utils.serialization;
+package dev.hse.cmc.utils.serialization;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
-import dev.hse.template.pojo.TemplateRaw;
+import dev.hse.cmc.pojo.ResponseData;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.common.serialization.Serializer;
 
 @Slf4j(topic = "[template][producer][serializer]")
-public class RawModelSerializer implements Serializer<TemplateRaw> {
+public class RawModelSerializer implements Serializer<ResponseData> {
 
     private final JsonMapper mapper = JsonMapperUtils.getJsonMapper();
 
     @Override
-    public byte[] serialize(String s, TemplateRaw templateRaw) {
+    public byte[] serialize(String s, ResponseData templateRaw) {
         try {
             return mapper.writeValueAsBytes(templateRaw);
         } catch (JsonProcessingException e) {

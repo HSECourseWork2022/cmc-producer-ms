@@ -5,7 +5,7 @@ networks:
     driver: bridge
 services:
   template_producer:
-    container_name: template_producer
+    container_name: cmc_producer
     build:
       dockerfile: Dockerfile
       context: .
@@ -13,8 +13,8 @@ services:
       - app-tier
     environment:
       - BOOTSTRAP_SERVERS=kafka:9092
-      - PRODUCER_SOURCE=template-source
-      - PRODUCER_SUBTHEME=template-subtheme
+      - PRODUCER_SOURCE=cmc
+      - PRODUCER_SUBTHEME=cryptocurrency
     depends_on:
       - kafka
 

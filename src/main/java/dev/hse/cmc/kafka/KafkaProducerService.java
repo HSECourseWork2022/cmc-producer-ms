@@ -1,6 +1,6 @@
-package dev.hse.template.kafka;
+package dev.hse.cmc.kafka;
 
-import dev.hse.template.pojo.TemplateRaw;
+import dev.hse.cmc.pojo.ResponseData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,9 +14,9 @@ public class KafkaProducerService {
 
     @Value("${producer.source}.${producer.subtheme}.producers.outcome")
     private String outputTopic;
-    private final KafkaTemplate<String, TemplateRaw> kafkaTemplate;
+    private final KafkaTemplate<String, ResponseData> kafkaTemplate;
 
-    public void send(TemplateRaw templateRaw) {
+    public void send(ResponseData templateRaw) {
         log.info("Sending to '{}' topic", outputTopic);
         kafkaTemplate.send(outputTopic, templateRaw);
     }
